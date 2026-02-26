@@ -1,5 +1,5 @@
 
-This repo is to get more granual state-related data only from [lab.ethpandaops.io](https://lab.ethpandaops.io/ethereum/execution/state-growth) to inform [this slicing](https://notes.ethereum.org/U9xM4VOPR9isPK7lOZJUQg?view#3-Ethereum-Data)
+This repo is to get more granual state-related data only from [lab.ethpandaops.io](https://lab.ethpandaops.io/ethereum/execution/state-growth) to inform the size estimates in [this slicing](https://notes.ethereum.org/U9xM4VOPR9isPK7lOZJUQg?view#3-Ethereum-Data)
 
 ### State Anatomy
 
