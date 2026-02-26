@@ -1,14 +1,5 @@
-## State of Ethstate
 
-An exploration of Ethereum's state structure and its current size, using data from [The Lab by ethPandaOps](https://lab.ethpandaops.io).
-
-### Ethereum State Anatomy
-
-Ethereum state is composed of three storage domains:
-
-- **World State Trie (Account Trie)** — a Modified Merkle Patricia Trie mapping `keccak256(address)` to RLP-encoded account objects containing `[nonce, balance, storageRoot, codeHash]`
-- **Storage Tries** — one per contract account, mapping `keccak256(slot_index)` to RLP-encoded 256-bit storage values. The account's `storageRoot` field points to this trie's root
-- **Code Store** — a flat key-value store (not a trie) mapping `codeHash` to raw EVM bytecode
+### State Anatomy
 
 ![Ethereum State Diagram](state-diagram.png)
 

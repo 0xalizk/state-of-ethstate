@@ -40,3 +40,9 @@ storybook-static
 
 # ESLint
 .eslintcache
+
+# Claude
+.claude/settings.local.json
+
+# Gitignore
+.gitignore
