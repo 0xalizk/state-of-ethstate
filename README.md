@@ -3,11 +3,11 @@
 - Exclusion criteria informed by [this analysis](https://ethereum-magicians.org/t/not-all-state-is-equal/25508) eg dead or spammy contracts
 
 **Current slicing into datasets (a tailored PIR engine per slice):**
-- **`Express`**: $\color{#22c55e}{\textsf{1-10 GB}}$ of highly manually curated data that is frequently queried. This includes: ETH/ERC* balances and asscoiated receipts like the ubiquitious ERC20 transfer receipts, and recent blocks. This data set serves users constructing common transactions or checking they received an expected transaction, and it serves to populate the first view in wallets where users expect to see their ETH and token transfers quickly.
-- **`Small`**: $\color{#84cc16}{\textsf{10-20 GB}}$ encompases (a) all account "header" data (balance,nonce,codehash,storageRoot) without exclusion and (b) contract bytecode.
-- **`Medium`**: $\color{#f59e0b}{\textsf{60-100 GB}}$ encompases the nodes needed to construct Merkle roots validating account headers up to the global state root. This is useful for light clients verifications for example.
-- **`Large`**: $\color{#ef4444}{\textsf{100-300 GB}}$ encompases the both values and Merkle roots of storage. This is useful for verifiable ERC20 balances for example.
-- **`Huge`**: $\color{#991b1b}{\textsf{2-20 TB}}$ depending on the node and depending on what is pruned out based on similar criteria as those being considered for state expiry (dead code, ancient accounts, etc). It hosts the full archive of snapshots of the Ethereum state at every historical block serving both the values and the Merkle roots to proof them against the global state root at that snapshot in time.
+- **`Express`**: $\textbf{\color{#16a34a}{\textsf{1-10 GB}}}$ of highly manually curated data that is frequently queried. This includes: ETH/ERC* balances and asscoiated receipts like the ubiquitious ERC20 transfer receipts, and recent blocks. This data set serves users constructing common transactions or checking they received an expected transaction, and it serves to populate the first view in wallets where users expect to see their ETH and token transfers quickly.
+- **`Small`**: $\textbf{\color{#84cc16}{\textsf{10-20 GB}}}$ encompases (a) all account "header" data (balance,nonce,codehash,storageRoot) without exclusion and (b) contract bytecode.
+- **`Medium`**: $\textbf{\color{#f59e0b}{\textsf{60-100 GB}}}$ encompases the nodes needed to construct Merkle roots validating account headers up to the global state root. This is useful for light clients verifications for example.
+- **`Large`**: $\textbf{\color{#ef4444}{\textsf{100-300 GB}}}$ encompases the both values and Merkle roots of storage. This is useful for verifiable ERC20 balances for example.
+- **`Huge`**: $\textbf{\color{#991b1b}{\textsf{2-20 TB}}}$ depending on the node and depending on what is pruned out based on similar criteria as those being considered for state expiry (dead code, ancient accounts, etc). It hosts the full archive of snapshots of the Ethereum state at every historical block serving both the values and the Merkle roots to proof them against the global state root at that snapshot in time.
 
 ### State Anatomy
 
