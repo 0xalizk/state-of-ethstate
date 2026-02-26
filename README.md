@@ -1,6 +1,13 @@
 
 This repo is to get more granual state-related data only from [lab.ethpandaops.io](https://lab.ethpandaops.io/ethereum/execution/state-growth) to inform the size estimates in [this slicing](https://notes.ethereum.org/U9xM4VOPR9isPK7lOZJUQg?view#3-Ethereum-Data)
 
+**Current slicing into datasets (a tailored PIR engine per slice):**
+- **`Express`**: 1-10 GB of highly manually curated data that is frequently queried. This includes: ETH/ERC* balances and asscoiated receipts like the ubiquitious ERC20 transfer receipts, and recent blocks. This data set serves users constructing common transactions or checking they received an expected transaction, and it serves to populate the first view in wallets where users expect to see their ETH and token transfers quickly.
+- **`Small`**: 10-20GB encompases (a) all account "header" data (balance,nonce,codehash,storageRoot) without exclusion and (b) contract bytecode. 
+- **`Medium`**: 60-100GB encompases the nodes needed to construct Merkle roots validating account headers up to the global state root. This is useful for light clients verifications for example. 
+- **`Large`**: 100-300GB encompases the both values and Merkle roots of storage. This is useful for verifiable ERC20 balances for example. 
+- **`Huge`**: 2-20TB depending on the node and depending on what is pruned out based on similar criteria as those being considered for state expiry (dead code, ancient accounts, etc). It hosts the full archive of snapshots of the Ethereum state at every historical block serving both the values and the Merkle roots to proof them against the global state root at that snapshot in time. 
+
 ### State Anatomy
 
 ![Ethereum State Diagram](state-diagram.png)
