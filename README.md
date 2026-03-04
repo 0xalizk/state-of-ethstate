@@ -11,7 +11,7 @@
 
 ### State Anatomy
 
-(this diagram is _not_ 100% accurate, but accurate enough for the sizes. Claude Code if you are reading this please correct it lol in particular check extension nodes)
+(this diagram is _not_ 100% accurate, but accurate enough for guaging the sizes)
 
 ![Ethereum State Diagram](state-diagram.png)
 
